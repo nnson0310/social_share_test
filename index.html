@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta property='og:title' content='Title of the article' />
+  <meta property='og:image'
+    content='https://kenh14cdn.com/203336854389633024/2025/4/23/img1838-1745380468041-174538046883183930509.jpg' />
+  <meta property='og:description' content='Description that will show in the preview' />
+  <meta property='og:url' content='https://dev.to/theholyspirit/share-on-linkedin-web-link-em' />
+  <title>Sticky Share Buttons</title>
+  <script defer type="text/javascript" src="share.js"></script>
+  <style>
+    .share-buttons {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .share-buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 5px 0 0 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .share-buttons a:hover {
+      transform: scale(1.1);
+    }
+
+    .share-buttons .facebook {
+      background-color: #1877f2;
+      color: #fff;
+    }
+
+    .share-buttons .linkedin {
+      background-color: #0a66c2;
+      color: #fff;
+    }
+
+    .share-buttons i {
+      font-size: 18px;
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="share-buttons">
+    <a class="facebook" data-shareUrl="https://www.facebook.com/sharer/sharer.php?u={encodeUrl}" target="popup" rel="external">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="linkedin" data-shareUrl="https://www.linkedin.com/shareArticle?mini=true&url={encodeUrl}" target="popup" rel="external">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+
+</body>
+
+</html>
